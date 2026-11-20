@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071b3a"><meta name="description" content="ChemGuard JO — bilingual chemical burn awareness and first aid guide.">
+  <link rel="manifest" href="manifest.json"><link rel="icon" href="assets/icon.png"><link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="stylesheet" href="style.css"><title>ChemGuard JO</title>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="ChemGuard JO home"><img src="assets/icon.png" alt=""><span><b>ChemGuard</b><small>JO · FIRST AID</small></span></a>
+  <button id="langBtn" class="lang-btn" aria-label="Change language">EN</button>
+</header>
+<main id="app">
+  <section class="hero">
+    <div class="hero-copy"><span class="eyebrow" data-i18n="eyebrow">دليل السلامة والإسعافات الأولية</span>
+      <h1 data-i18n="heroTitle">تصرّف بسرعة. احمِ نفسك.</h1>
+      <p data-i18n="heroText">دليل مبسّط للتعامل الأولي مع الحروق الكيميائية والتعرّض للمواد الأكّالة.</p>
+      <a class="primary-btn" href="#firstaid" data-i18n="heroCta">ابدأ بالإسعاف الأولي <span>←</span></a>
+    </div>
+    <div class="hero-art"><div class="orbit"></div><img src="assets/icon.png" alt="ChemGuard medical shield icon"></div>
+  </section>
+  <section class="emergency-strip">
+    <div><span class="pulse"></span><b data-i18n="emergencyTitle">حالة طارئة؟</b><small data-i18n="emergencyText">في الأردن اتصل برقم الطوارئ الموحد</small></div>
+    <a href="tel:911" class="call-btn"><span>911</span><small data-i18n="callNow">اتصل الآن</small></a>
+  </section>
+  <section id="firstaid" class="section">
+    <div class="section-heading"><div><span class="eyebrow" data-i18n="urgentLabel">الأولوية الآن</span><h2 data-i18n="firstAidTitle">ماذا تفعل فورًا؟</h2></div><span class="step-tag">01 / 04</span></div>
+    <div class="steps-grid">
+      <article class="step-card"><div class="step-icon blue">🛡️</div><span class="step-no">01</span><h3 data-i18n="s1t">احمِ نفسك أولًا</h3><p data-i18n="s1p">لا تلمس المادة الكيميائية مباشرة. استخدم قفازات ووسائل حماية مناسبة إن توفرت، وابتعد عن الأبخرة.</p></article>
+      <article class="step-card"><div class="step-icon aqua">🧹</div><span class="step-no">02</span><h3 data-i18n="s2t">أزل المادة الجافة</h3><p data-i18n="s2p">إذا كانت المادة مسحوقًا جافًا، أزلها بلطف بالفرشاة قبل استخدام الماء، مع تجنب نشرها.</p></article>
+      <article class="step-card"><div class="step-icon orange">👕</div><span class="step-no">03</span><h3 data-i18n="s3t">أزل الملابس الملوثة</h3><p data-i18n="s3p">انزع الملابس والمجوهرات الملوثة بحذر. لا تنزع أي شيء ملتصق بالجلد.</p></article>
+      <article class="step-card"><div class="step-icon cyan">💧</div><span class="step-no">04</span><h3 data-i18n="s4t">اغسل بماء جارٍ</h3><p data-i18n="s4p">اغسل الجلد بماء جارٍ فاتر أو بارد بكمية كبيرة لمدة لا تقل عادةً عن 15–20 دقيقة، واتبع تعليمات المادة المحددة إن وجدت.</p></article>
+    </div>
+    <div class="notice"><b data-i18n="important">مهم:</b> <span data-i18n="importantText">اطلب المساعدة الطبية فورًا عند الاشتباه بحرق كيميائي. لا تؤخر الغسل بانتظار معرفة المادة أو البحث عن مادة معادِلة.</span></div>
+  </section>
+  <section class="section exposure">
+    <div class="section-heading"><div><span class="eyebrow" data-i18n="chooseLabel">اختر نوع التعرّض</span><h2 data-i18n="exposureTitle">أين حدث التعرّض؟</h2></div></div>
+    <div class="tabs">
+      <button class="tab active" data-panel="skin"><span>🖐️</span><b data-i18n="skin">الجلد</b></button>
+      <button class="tab" data-panel="eyes"><span>👁️</span><b data-i18n="eyes">العينان</b></button>
+      <button class="tab" data-panel="breathing"><span>🌬️</span><b data-i18n="breathing">الاستنشاق</b></button>
+      <button class="tab" data-panel="swallow"><span>⚠️</span><b data-i18n="swallow">الابتلاع</b></button>
+    </div>
+    <div id="exposurePanel" class="panel-card" aria-live="polite"></div>
+  </section>
+  <section class="section">
+    <div class="section-heading"><div><span class="eyebrow" data-i18n="avoidLabel">تجنّب هذه الأخطاء</span><h2 data-i18n="dontTitle">ما الذي لا يجب فعله؟</h2></div></div>
+    <div class="dont-grid">
+      <div class="dont-item"><span>🚫</span><div><b data-i18n="d1t">لا تحاول المعادلة</b><p data-i18n="d1p">لا تضف حمضًا إلى قلوي أو العكس؛ قد يحدث تفاعل وحرارة تزيد الإصابة.</p></div></div>
+      <div class="dont-item"><span>🧴</span><div><b data-i18n="d2t">لا تضع كريمات أو زيوتًا</b><p data-i18n="d2p">تجنب المراهم والخلطات المنزلية والثلج على المنطقة المصابة.</p></div></div>
+      <div class="dont-item"><span>🩹</span><div><b data-i18n="d3t">لا تفرك الجلد</b><p data-i18n="d3p">لا تفرك أو تمسح المادة على الجلد ولا تفقأ الفقاعات.</p></div></div>
+      <div class="dont-item"><span>⏳</span><div><b data-i18n="d4t">لا تؤخر طلب المساعدة</b><p data-i18n="d4p">لا تنتظر ظهور الأعراض؛ قد تتطور الإصابة أو تبدو أصغر من عمقها الحقيقي.</p></div></div>
+    </div>
+  </section>
+  <section class="section warning-section">
+    <div class="warning-head"><span>!</span><div><h2 data-i18n="redFlagsTitle">متى تكون الحالة خطيرة؟</h2><p data-i18n="redFlagsSub">اطلب الإسعاف فورًا عند وجود أي مما يلي</p></div></div>
+    <ul class="redflags">
+      <li data-i18n="r1">صعوبة التنفس أو السعال الشديد أو التعرّض للأبخرة في مكان مغلق.</li>
+      <li data-i18n="r2">تعرّض العينين أو الوجه أو اليدين أو الأعضاء التناسلية.</li>
+      <li data-i18n="r3">مساحة كبيرة أو ألم شديد أو تغيّر واضح في لون الجلد أو ظهور فقاعات.</li>
+      <li data-i18n="r4">ابتلاع مادة كيميائية أو حدوث دوخة أو إغماء أو تشنجات.</li>
+    </ul>
+    <a href="tel:911" class="red-call">☎ <span data-i18n="call911">اتصل بالطوارئ 911</span></a>
+  </section>
+  <section class="section quiz-section">
+    <div class="section-heading"><div><span class="eyebrow" data-i18n="learnLabel">اختبر معلوماتك</span><h2 data-i18n="quizTitle">هل تعرف التصرف الصحيح؟</h2></div></div>
+    <div class="quiz-card"><p id="question"></p><div id="answers" class="answers"></div><p id="feedback" class="feedback" aria-live="polite"></p><button id="nextQuestion" class="primary-btn" hidden data-i18n="next">السؤال التالي ←</button></div>
+  </section>
+  <section class="section sources">
+    <h2 data-i18n="sourcesTitle">المراجع الطبية</h2>
+    <p data-i18n="sourcesIntro">تم إعداد المحتوى التوعوي بالاستناد إلى إرشادات الجهات التالية. اتبع دائمًا تعليمات فريق الطوارئ ونشرة بيانات سلامة المادة (SDS).</p>
+    <a href="https://cpr.heart.org/en/resuscitation-science/2024-first-aid-guidelines" target="_blank" rel="noopener">American Heart Association — 2024 First Aid Guidelines ↗</a>
+    <a href="https://www.mayoclinic.org/first-aid/first-aid-chemical-burns/basics/art-20056667" target="_blank" rel="noopener">Mayo Clinic — Chemical Burns: First Aid ↗</a>
+    <a href="https://www.nhs.uk/conditions/acid-and-chemical-burns/" target="_blank" rel="noopener">NHS — Acid and Chemical Burns ↗</a>
+    <a href="https://www.psd.gov.jo/" target="_blank" rel="noopener">مديرية الأمن العام الأردنية — الطوارئ ↗</a>
+  </section>
+</main>
+<footer><b>ChemGuard JO</b><span data-i18n="footer">التوعية تنقذ الأرواح · محتوى تعليمي وليس بديلًا عن الرعاية الطبية.</span></footer>
+<script src="app.js"></script>
+</body></html>

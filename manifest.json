@@ -1,0 +1,13 @@
+{
+  "name": "ChemGuard JO - Chemical Burn First Aid",
+  "short_name": "ChemGuard JO",
+  "description": "Bilingual chemical burn awareness and first aid guide for Jordan.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f8fc",
+  "theme_color": "#071b3a",
+  "icons": [
+    {"src":"assets/icon.png","sizes":"1024x1024","type":"image/png","purpose":"any"}
+  ]
+}
